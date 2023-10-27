@@ -40,14 +40,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "tailwind.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/sheena-taneja/NetflixGPT.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sheena-taneja/NetflixGPT/issues"
-  },
-  "homepage": "https://github.com/sheena-taneja/NetflixGPT#readme"
+  "license": "ISC"
 }
