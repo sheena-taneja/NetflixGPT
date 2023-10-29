@@ -3,9 +3,9 @@ import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import  { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { LOGO } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -13,7 +13,6 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -34,7 +33,7 @@ const Login = () => {
         .then(() =>{
           const { uid, email, displayName } = auth.currentUser;
           dispatch(addUser({uid,email,displayName}));
-          navigate("/browse");
+          // navigate("/browse");
         })
       })
       .catch((error) => {
@@ -48,7 +47,7 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log({user});
-        navigate("/browse");
+        // navigate("/browse");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -63,7 +62,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={LOGO}
           alt="backgroundimage"
         />
       </div>
