@@ -11,7 +11,6 @@ function MainContainer() {
   const mainMovie = movies[0];
   return (
     <div>
-        main
       <VideoTitle details={mainMovie}/>
       <VideoBackground details={mainMovie} />
     </div>
