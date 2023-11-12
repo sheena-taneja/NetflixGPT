@@ -15,3 +15,7 @@ export const API_CONST = {
 export const TMDB_IMG_PATH = "https://image.tmdb.org/t/p/original";  
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w300";
+
+export const SUPPORTED_LANGAUGES = [{identifier:"en",name:"English"},
+                                    {identifier:"hi",name:"Hindi"},
+                                    {identifier:"es",name:"Spanish"}]

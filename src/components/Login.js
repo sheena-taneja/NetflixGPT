@@ -19,6 +19,7 @@ const Login = () => {
   }
 
   const handleButtonOnClick = () => {
+    console.log("button clicked")
     const msg = checkValidData(email.current.value, password.current.value);
     setIsValidationError(msg);
     if(msg) return;
@@ -87,7 +88,7 @@ const Login = () => {
             className="p-2 my-2 w-full bg-gray-800 h-12 rounded-lg"
           />
           <p className="text-red-500 text-lg font-bold p-2">{isValidationError}</p>
-          <button className="p-2 my-4 bg-red-700 w-full rounded-lg" onClick={handleButtonOnClick}>
+          <button type="button" className="p-2 my-4 bg-red-700 w-full rounded-lg" onClick={handleButtonOnClick}>
           {isSignInForm ? "Sign In":"Sign Up"}
           </button>
           <p className="cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ? "New to Netflix? Sign Up Now": "Already a user? Sign In" }</p>
